@@ -1,0 +1,47 @@
+
+
+.modal-header {
+  min-height: 51.428571px;
+  padding: 42px;
+  background: #a26c6c;
+  border: yellow;
+  border-bottom: 2px solid #b92e2e;
+}
+
+
+.modal-content[_ngcontent-c2] {
+  position: fixed;
+  top: 263px;
+  width: 406px;
+  height: 352px;
+  background-color: #fff;
+  border: 2px solid #999;
+  outline: 0;
+
+}
+
+
+.modal[_ngcontent-c4] {
+  position: fixed;
+  top: 2px;
+  right: 0;
+
+  left: 6px;
+  z-index: 1040;
+  display: none;
+  overflow: auto;
+  overflow-y: scroll;
+  background: rgba(101, 105, 109, 0.84);
+}
+
+.modal-content[_ngcontent-c4][_ngcontent-c4] {
+  position: fixed;
+  top: 238px;
+  left: -133px;
+  background-color: #fff;
+  border: 2px solid #999;
+  border: -3px solid rgba(0,0,0,0.2);
+  height: 393px;
+  width: 604px;
+  outline: 0;
+}

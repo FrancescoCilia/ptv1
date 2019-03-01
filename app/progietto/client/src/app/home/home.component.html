@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-smart-table/2.1.8/smart-table.min.js"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script src="tabella.js"></script>
+
+<header class="header clearfix">
+    <nav>
+
+        <ul class="nav nav-pills float-right">
+            <li class="nav-item">
+                <button type="button" class="btn btn-primary">
+                  Home
+                </button>
+            </li>
+            <!--
+            <li class="nav-item">
+                <button #addPost type="button" class="btn btn-link" data-toggle="modal" data-target="#exampleModal">
+                  Add
+                </button>
+            </li> -->
+            <li class="nav-item">
+                <button (click)="logout()" type="button" class="btn btn-link">
+                  Logout
+                </button>
+            </li>
+            <li class="nav-item">
+                <button (click)="apriPaginaProva()" type="button" class="btn btn-link">
+                    Prova
+                </button>
+            </li>
+        </ul>
+    </nav>
+    <h3 class="text-muted">Angular Blog App</h3>
+</header>
+
+<div class="col-sm-9">
+    <main role="main">
+
+        <app-show-post></app-show-post>
+        <app-add-post></app-add-post>
+
+    </main>
+
+</div>
+
+<div class="col-sm-3">
+    <table>
+        <tr>
+            <th style="width:50%"><b>Utenti online </b></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let message of lista">
+            <td><b>{{message}}</b> </td>
+            <td><i class="fa fa-circle"></i></td>
+            <td><i type="button" data-toggle="modal" data-target="#exampleModal" class="material-icons">
+          chat
+        </i></td>
+        </tr>
+    </table>
+</div>
+<button (click)="creaPartita()">Crea Partita</button>
+
+<button (click)="provaUnione()">prova unione</button>
+
+<button (click)="eliminaPartita()">eliminaPartita</button>
+<!--
+<button (click)="invioAlServer()">bottoneProva</button>
+-->
+
+<!--  visualizzo la lista degli utenti online -->
+
+<footer class="footer">
+    <p>&copy;</p>
+</footer>

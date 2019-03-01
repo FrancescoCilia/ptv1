@@ -1,0 +1,18 @@
+<form class="form-signin">
+    <h2 class="form-signin-heading">Registrazione</h2>
+    <label for="inputName" class="sr-only">Name</label>
+    <input name="name" [(ngModel)]="user.name" type="name" id="inputName" class="form-control" placeholder="Name" required>
+    <label for="inputEmail" class="sr-only">Username</label>
+    <input name="email" [(ngModel)]="user.username" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input name="password" [(ngModel)]="user.password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox">
+        <label>
+         <input type="checkbox" value="remember-me"> Remember me
+       </label>
+    </div>
+    <button (click)="provaPerHeader()" class="btn btn-lg btn-primary btn-block" type="button">Registra</button>
+    <br>
+    <h3>Se sei già registrato ! Accedi </h3>
+    <button class="btn btn-lg btn-primary btn-block" [routerLink]="['login']" type="button">Login</button>
+</form>
